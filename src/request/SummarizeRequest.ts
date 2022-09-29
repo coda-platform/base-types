@@ -13,6 +13,7 @@ export interface SummarizeRequestBody {
 export type SummarizeRequestField = string | {
     path: string;
     label?: string;
+    type?: string;
 }
 export interface SummarizeRequestSelector {
     resource: string;
