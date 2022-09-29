@@ -3,16 +3,20 @@ export interface SummarizeRequest {
     body: SummarizeRequestBody;
 }
 
-export interface SummarizeRequestHeader {}
+export interface SummarizeRequestHeader { }
 
 export interface SummarizeRequestBody {
     selectors: SummarizeRequestSelector[];
     options: SummarizeRequestOptions;
 }
 
-export type SummarizeRequestField = string | { path: string}
+export type SummarizeRequestField = string | {
+    path: string;
+    label?: string;
+}
 export interface SummarizeRequestSelector {
     resource: string;
+    label?: string;
     fields: SummarizeRequestField[];
     filters: SummarizeRequestSelectorFilter[];
     joins?: SummarizeRequestSelector;
