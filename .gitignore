@@ -1,0 +1,5 @@
+# NPM cache
+node_modules
+
+# Compiled files
+dist
